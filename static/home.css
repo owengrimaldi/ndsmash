@@ -1,0 +1,13 @@
+.topnav {
+    background-color: BB9A4F;
+    overflow: hidden;
+    text-align: center;
+}
+
+.topnav a {
+    float: center;
+    color: #ffffff;
+    text-align: center;
+    font-family: Anton;
+    font-size: 30px;
+}

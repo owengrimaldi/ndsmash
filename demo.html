@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<head>
+    <h1><b>NDSmash Stage 3: Basic Demo</b></h1>
+    <h4>Data used is Smash Bros. Ultimate tournament data in the state of Indiana for the past 5 years, sourced from start.gg's public API.</h4>
+    <h3><b>Current Data Numbers (still adding more)</b></h3>
+    <table>
+        <tr>
+            <th>Entity</th>
+            <th># of Entries</th>
+        </tr>
+        <tr>
+            <td>Players</td>
+            <td>{{numPlayers}}</td>
+        </tr>
+        <tr>
+            <td>Tournaments</td>
+            <td>{{numTournaments}}</td>
+        </tr>
+        <tr>
+            <td>Sets</td>
+            <td>{{numSets}}</td>
+        </tr>
+
+    </table>
+
+    <h3><b>Example Query</b></h3>
+    <p>This query searches for players with the prefix/sponsor "ND", which is comprised of players from Notre Dame.</p>
+    <p>Query used: "select username from players where players.prefix = 'ND'"</p>
+    <p>Players: {{players}}</p>
+
+    <h3><b>Example Data (100 Most Recent Tournaments)</b></h3>
+    <p>*The duplicates in entries are seperate brackets/events at the same tournament, usually being Singles and Doubles events. Their ID's demonstrate uniqueness, although every other aspect of the entry should remain identical. This is going to be fixed.</p>
+    <table>
+        <tr>
+            <th>Event ID</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Location</th>
+            <th>URL</th>
+            <th># of Attendees</th>
+        </tr>
+        {% for tournament in tournaments %}
+        <tr>
+            <th>{{tournament[0]}}</th>
+            <th>{{tournament[1]}}</th>
+            <th>{{tournament[2]}}</th>
+            <th>{{tournament[3]}}</th>
+            <th>{{tournament[4]}}</th>
+            <th>{{tournament[5]}}</th>
+        </tr>
+        {% endfor %}
+    </table>
+
+</head>
+<body>
+</body>
+</html>
