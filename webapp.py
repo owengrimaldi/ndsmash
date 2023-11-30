@@ -50,7 +50,7 @@ def getRecentTournaments():
 
 
 #Main function that runs when webapp is started.
-@app.route("/")
+@app.route("/demo")
 def index():
     #gets ND players, # of entries, and recent tournaments for demo page
     queriedPlayers = ndQuery()
@@ -60,14 +60,15 @@ def index():
     #sends data to the html template where it is displayed to user
     return render_template("./demo.html", players=queriedPlayers, numPlayers=queriedResult[0], numTournaments = queriedResult[1], numSets = queriedResult[2], tournaments = tournaments)
 
-@app.route("/home")
-def landing():
+@app.route("/", methods=["GET", "POST"])
+def home():
     namelogov3Ratio = 4.253392812
     namelogov4Ratio = 1.904075714
 
-    return render_template("./home.html", width=250*namelogov3Ratio, height=250)
+    return render_template("./home.html", width=190, height=190)
 
 
 
 #runs on localhost, provides a port
 app.run(host="0.0.0.0", port=5027)
+

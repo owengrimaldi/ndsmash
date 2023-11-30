@@ -1,13 +1,116 @@
+@font-face {
+    font-family: "Anton";
+    src: url("fonts/Anton-Regular.ttf")
+}
+
+::placeholder {
+    color: #fff;
+}
+
+.toplogo a {
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: Anton;
+    font-size: 200px;
+    text-decoration: none;
+    transition: color 0.4s;
+    margin: none;
+    line-height: 240px;
+}
+
+.toplogo a:hover {
+    color: #BB9A4E;
+}
+
+
 .topnav {
-    background-color: BB9A4F;
     overflow: hidden;
     text-align: center;
 }
 
 .topnav a {
-    float: center;
     color: #ffffff;
+    font-family: Anton;
+    font-size: 45px;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: color 0.4s;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.topnav a:hover {
+    color: #BB9A4E;
+}
+
+
+.searchbar {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.searchinput{
+    width: 500px;
+    border: 3px solid #BB9A4E;
+    background: transparent;
+    padding: 30px 45px;
+    border-radius: 50px;
+    outline: none;
+    font-size: 40px;
+    font-family: Anton;
+    color: #fff;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+.gobutton {
+    width: 140px;
+    border: 3px solid #BB9A4E;
+    background: transparent;
+    padding: 30px 45px;
+    border-radius: 50px;
+    outline: none;
+    font-size: 40px;
+    font-family: Anton;
+    color: #fff;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+.searchtext {
+    color: #fff;
     text-align: center;
     font-family: Anton;
     font-size: 30px;
+    padding-top: 100px;
+}
+
+.searchbuttons {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.searchbuttons a {
+    font-family: Anton;
+    font-size: 30px;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.playerbutton {
+    width: 250px;
+    color: #fff;
+    border: 3px solid #BB9A4E;
+    background: transparent;
+    border-radius: 50px;
+    padding: 20px 35px;
+    font-family: Anton;
+    font-size: 30px;
+}
+
+.playerbutton:hover {
+    color:#BB9A4E;
+    transition: color 0.4s;
 }

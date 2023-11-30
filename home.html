@@ -2,16 +2,54 @@
 <html style="background-color: rgb(11, 35, 62);">
     <head>
         <link rel="stylesheet" href="/static/home.css">
-        <div style="text-align: center; display: block; margin: auto;">
-            <img href="/" src="/static/namelogov3.svg", width="{{width}}", height="{{height}}"></img>
+        <div class="toplogo" style="text-align: center; display: block; margin: auto;">
+                <img src="/static/logo.svg", width="{{width}}", height="{{height}}"></img>
+                <a href="/">NDSMASH</a>
         </div>
     </head>
     <body>
         <div class="topnav">
-                <a href="">Home</a>
-                <a href="">News</a>
-                <a href="">Contact</a>
-                <a href="">About</a>
+                <a href="">PLAYERS</a>
+                <a href="">H2H</a>
+                <a href="">TOURNAMENTS</a>
+                <a href="">RANKINGS</a>
+                <a href="">ABOUT</a>
         </div>
+
+        <div class="searchtext">
+            <a>GET STATS FOR EITHER</a>
+        </div>
+
+        <div class="searchbuttons">
+            <input type="button" id="pButton" class="playerbutton" value="PLAYERS" onclick="playerButton()"></input>
+            <a><- SELECT ONE -></a>
+            <input type="button" id="tButton" class="playerbutton" value="TOURNAMENTS" onclick="tournamentButton()"></input>
+            
+            <script>
+                function playerButton() {
+                    if (1 == 1) {
+                        document.getElementById("pButton").style.color = "#BB9A4E";
+                        document.getElementById("tButton").style.color = "#FFFFFF";
+                    }
+                }
+                
+                function tournamentButton() {
+                    if (1 == 1) {
+                        console.log('youch2');
+                        document.getElementById("tButton").style.color = "#BB9A4E";
+                        document.getElementById("pButton").style.color = "#FFFFFF";
+                    }
+                }
+            </script>
+        </div>
+
+        </div>
+
+        <div class="searchbar">
+            <input type="text" placeholder="SEARCH..." class="searchinput">
+            <input type="button" value="GO" class="gobutton"></input>
+        </div>
+
+
     </body>
 </html>
