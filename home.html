@@ -6,10 +6,15 @@
                 <img src="/static/logo.svg", width="{{width}}", height="{{height}}"></img>
                 <a href="/">NDSMASH</a>
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js">   
+        </script>   
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js">   
+        </script>   
     </head>
     <body>
         <div class="topnav">
-                <a href="">PLAYERS</a>
+                <a href="/players">PLAYERS</a>
                 <a href="">H2H</a>
                 <a href="">TOURNAMENTS</a>
                 <a href="">RANKINGS</a>
@@ -21,35 +26,50 @@
         </div>
 
         <div class="searchbuttons">
-            <input type="button" id="pButton" class="playerbutton" value="PLAYERS" onclick="playerButton()"></input>
-            <a><- SELECT ONE -></a>
-            <input type="button" id="tButton" class="playerbutton" value="TOURNAMENTS" onclick="tournamentButton()"></input>
-            
-            <script>
-                function playerButton() {
-                    if (1 == 1) {
-                        document.getElementById("pButton").style.color = "#BB9A4E";
-                        document.getElementById("tButton").style.color = "#FFFFFF";
-                    }
-                }
+            <form class="whichButtons">
+                <input type="button" id="pButton" class="playerbutton" value="PLAYERS" onclick="playerButton()" name="filterButton"></input>
+                <a>OR</a>
+                <input type="button" id="tButton" class="playerbutton" value="TOURNAMENTS" onclick="tournamentButton()" name="filterButton"></input>
                 
-                function tournamentButton() {
-                    if (1 == 1) {
-                        console.log('youch2');
-                        document.getElementById("tButton").style.color = "#BB9A4E";
-                        document.getElementById("pButton").style.color = "#FFFFFF";
+                <script>
+                    function playerButton() {
+                        document.getElementById("pButton").style.color = "#0b233e";
+                        document.getElementById("tButton").style.color = "#FFFFFF";
+                        
+                        document.getElementById("pButton").style.backgroundColor = "#BB9A4E";
+                        document.getElementById("tButton").style.backgroundColor = "#0b233e";
+
+                        document.getElementById('searchForm').action = "{{ playerURL }}";
                     }
-                }
-            </script>
+                    
+                    function tournamentButton() {
+                        document.getElementById("tButton").style.color = "#0b233e";
+                        document.getElementById("pButton").style.color = "#FFFFFF";
+
+                        document.getElementById("tButton").style.backgroundColor = "#BB9A4E";
+                        document.getElementById("pButton").style.backgroundColor = "#0b233e";
+
+                        document.getElementById('searchForm').action = "{{ tournamentURL }}";
+                    }
+
+                    function goButton() {
+                        document.getElementById("gButton").style.color = "#0b233e";
+                        document.getElementById("gButton").style.backgroundColor = "#BB9A4E";
+                    }
+
+                </script>
+            </form>
         </div>
 
         </div>
 
-        <div class="searchbar">
-            <input type="text" placeholder="SEARCH..." class="searchinput">
-            <input type="button" value="GO" class="gobutton"></input>
-        </div>
+        <p>*MUST SELECT PLAYER OR TOURNAMENT BUTTONS BEFORE GO</p>
 
+
+        <form action="/" class="searchbar" method="POST" id="searchForm">
+            <input type="text" placeholder="Search by name..." class="searchinput" id="autocomplete1" name="searchbar">
+            <input type="submit" value="GO" id="gButton" class="gobutton" onclick="goButton()"></input>
+        </form>
 
     </body>
 </html>

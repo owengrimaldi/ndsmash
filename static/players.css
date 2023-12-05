@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "Anton";
+    src: url("fonts/Anton-Regular.ttf")
+}
+
+
+.navbar a {
+    color: #fff;
+    font-size: 30px;
+    font-family: Anton;
+    text-decoration: none;
+    transition: color 0.4s;
+}
+
+.navbar a:hover{
+    color: #BB9A4E;
+}
+
+.nav {
+    padding-left: 10px;
+    padding-right: 10px;
+}

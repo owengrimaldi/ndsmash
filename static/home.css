@@ -11,7 +11,7 @@
     color: #FFFFFF;
     display: inline-block;
     font-family: Anton;
-    font-size: 200px;
+    font-size: 160px;
     text-decoration: none;
     transition: color 0.4s;
     margin: none;
@@ -31,7 +31,7 @@
 .topnav a {
     color: #ffffff;
     font-family: Anton;
-    font-size: 45px;
+    font-size: 35px;
     padding-left: 30px;
     padding-right: 30px;
     transition: color 0.4s;
@@ -46,7 +46,7 @@
 
 .searchbar {
     text-align: center;
-    padding-top: 100px;
+    padding-top: 70px;
 }
 
 .searchinput{
@@ -54,35 +54,40 @@
     border: 3px solid #BB9A4E;
     background: transparent;
     padding: 30px 45px;
-    border-radius: 50px;
+    border-radius: 30px;
     outline: none;
-    font-size: 40px;
+    font-size: 30px;
+    font-family: Anton;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.gobutton {
+    width: 140px;
+    border: 3px solid #BB9A4E;
+    background-color: #0b233e;
+    padding: 30px 45px;
+    border-radius: 30px;
+    outline: none;
+    font-size: 30px;
     font-family: Anton;
     color: #fff;
     letter-spacing: 1px;
     font-style: italic;
 }
 
-.gobutton {
-    width: 140px;
-    border: 3px solid #BB9A4E;
-    background: transparent;
-    padding: 30px 45px;
-    border-radius: 50px;
-    outline: none;
-    font-size: 40px;
-    font-family: Anton;
-    color: #fff;
-    letter-spacing: 1px;
-    font-style: italic;
+.gobutton:hover {
+    color:#BB9A4E;
+    transition: color 0.4s;
 }
+
 
 .searchtext {
     color: #fff;
     text-align: center;
     font-family: Anton;
     font-size: 30px;
-    padding-top: 100px;
+    padding-top: 70px;
 }
 
 .searchbuttons {
@@ -103,8 +108,8 @@
     width: 250px;
     color: #fff;
     border: 3px solid #BB9A4E;
-    background: transparent;
-    border-radius: 50px;
+    background-color: #0b233e;
+    border-radius: 30px;
     padding: 20px 35px;
     font-family: Anton;
     font-size: 30px;
@@ -113,4 +118,32 @@
 .playerbutton:hover {
     color:#BB9A4E;
     transition: color 0.4s;
+}
+
+.ui-autocomplete {
+    text-align: center;
+}
+
+.ui-menu-item {
+    width: 250px;
+    color: #fff;
+    border: 1px solid #BB9A4E;
+    border-radius: 50px;
+    text-align: center;
+    font-family: Anton;
+    list-style-type: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 5px;
+}
+
+.ui-menu-item a{
+    color: #fff;
+    padding-bottom: 50px;
+}
+
+p {
+    color:#fff;
+    font-family: Anton;
+    text-align: center;
 }
